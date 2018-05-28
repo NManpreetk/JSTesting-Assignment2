@@ -36,5 +36,13 @@ describe("Shopping Cart", function () {
         obj.scan(12, 23.4)
         obj.scan(345, 45.6)
         expect(obj.total()).toBe(136.8)
-    })
+    });
+    
+    it("should give total after discount", function(){
+        let obj = new ShoppingCart()
+        obj.scan(12, 23.4)
+        obj.scan(345, 45.6)
+        obj.discount(10)
+        expect(obj.total()).toBe(136.8)
+    });
 })
