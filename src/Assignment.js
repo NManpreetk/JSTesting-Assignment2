@@ -24,13 +24,13 @@ class ShoppingCart {
             this.item.pop(product)
         }
     }
-    // discount(percent) {
-    //     if (this.percent >= this.total() / 2) {
-    //         return this.total = this.total - (this.percent / 100) * this.total
-    //     } else {
-    //         return this.total() * this.percent / 100
-    //     }
-    // }
+    discount(percent) {
+        if (this.percent >= this.total() / 2) {
+            return this.total = this.total - (this.percent / 100) * this.total
+        } else {
+            return this.total() * this.percent / 100
+        }
+    }
     total() {
         var total = 0;
         for (var i = 0; i < this.item.length; i++) {
