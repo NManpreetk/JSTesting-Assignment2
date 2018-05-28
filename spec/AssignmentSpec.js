@@ -23,13 +23,13 @@ describe("Shopping Cart", function () {
         expect(obj.items()).toEqual([])
     });
 
-    // it("should remove an item", function(){
-    //     let obj = new ShoppingCart()
-    //     obj.scan(345, 45.6)
-    //     obj.scan(0864, 65.4)
-    //     obj.remove(0864, 65.4)
-    //     expect(obj.items()).toEqual([{itemID: 345, price: 45.6}])
-    // });
+    it("should remove an item", function(){
+        let obj = new ShoppingCart()
+        obj.scan(345, 45.6)
+        obj.scan(0864, 65.4)
+        obj.remove(0864, 65.4)
+        expect(obj.items()).toEqual([{itemID: 345, price: 45.6}])
+    });
 
     it("should return total of the items", function(){
         let obj = new ShoppingCart()
